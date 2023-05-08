@@ -7,69 +7,112 @@
     <title>Review</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 </head>
 
-
 <body>
+    <div class="container">
+        <a href="index.html"><span>Home</span></a>
+    </div>
 
-    <header>
-        <h2>Clients Reviews</h2>
-        <nav>
-            <ul>
-              <li><button id= "home-page" data-name="Home"><i class="fas fa-home"></i></button></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="testimonials">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <p>"Great body supplements ad by OmarTech Solution! Overwhelming response & significant sales increase. Thank you!".</p>
+                            <div class="imgbox">
+                                <img src="yazbekation.jpg" alt="client">
+                            </div>
+                            <div class="details">
+                                <h2>Mohammad Yazbek<br><span>Fitness Coach</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <p>
+                                "OmarTech Solution designed a fantastic clothing website - easy to use, visually stunning. Highly recommended!"</p>
+                            <div class="imgbox">
+                                <img src="client(5).jpg" alt="client">
+                            </div>
+                            <div class="details">
+                                <h2>Goerge Hareb<br><span>Clothes Shop Owner</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <p> Amazing experience with OmarTech Solution! The gaming lounge logo design is stunning. Greets to the design team!"</p>
+                            <div class="imgbox">
+                                <img src="client(7).jpg" alt="client">
+                            </div>
+                            <div class="details">
+                                <h2>Dani Merhi<br><span>Proffesional Gamer</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <p>"OmarTech Solution's software engineering design for our coffee shop is a game-changer! Improved efficiency & customer satisfaction."</p>
+                            <div class="imgbox">
+                                <img src="client(8).jpg" alt="client">
+                            </div>
+                            <div class="details">
+                                <h2>Tony Harfoush<br><span>Coffee Shop Owner</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <div class="layer"></div>
+                        <div class="content">
+                            <p>"Thanks to OmarTech Solution for making me an awesome C++ Project, it made my instructor so proud!"</p>
+                            <div class="imgbox">
+                                <img src="nabil_alakhdar-20230506-0002.jpg" alt="client">
+                            </div>
+                            <div class="details">
+                                <h2>Nabil Alakhdar<br><span>CS Student</span></h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+
+
     
-    <main>
-        <div>
-            <img id="" src="client1.png" alt="Sara">
-            <h3 class="reviewer">Sara Taynuva</h3>
-            <section class="review">
-                <p>I recently worked</p>
-                <p>with this servicing company,</p>
-                <p>and I have to say,</p>
-                <p>I am impressed with the quality</p>
-                <p>of service I received.</p>
-            </section>
-            <hr class="dashed-line vertical">
-        </div>
-        
-        <div>
-            <img id="" src="client3.png" alt="Eyaad">
-            <h3 class="reviewer">Eyaad Ghattas</h3>
-            <section class="review">
-                <p> I was able to find the service
-                <P>I needed quickly,</p>
-                <p>the quality of the work completed<P>
-                <P>by the service provider was up to standard.</p>
-                <p> The entrepreneur was quick to</p>
-                <P>respond to my concerns.</p>
-            </section>
-            <hr class="dashed-line vertical">
-        </div>
-        
-        <div>
-            <img id="" src="client2.png" alt="karine">
-            <h3 class="reviewer">Karine Botros</h3>
-            <section class="review">
-                <p>The entrepreneur was professional,</p>
-                <p>and the service provider they</p>
-                <p>connected me with completed the task</p> 
-                <p>efficiently and to a high standard.</p>
-            </section>
-        </div>
-    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView:'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 0,
+                modifier: 1,
+                slideShadows: true,
+            },
+            loop: true,
+        });
+    </script>
 </body>
-<script>
-// Get a reference to the button element
- const myButton1 = document.getElementById("home-page");
-// Add an event listener to the button
-myButton1.addEventListener("click", function() {
-  // Navigate to the new HTML page
-  window.location.href = "index.html";
-
-});
-</script>
-
 </html>

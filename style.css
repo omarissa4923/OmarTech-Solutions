@@ -1,8 +1,69 @@
 body {
     font-family: "Courier New", Courier, monospace;
-    background: linear-gradient(140deg, #00ffff, #a0e09e);
+    background: linear-gradient(140deg,#df76a0, #31032e);
     margin: 0;
     padding: 0;
+    max-width: 1200px;
+}
+.card{
+    position: relative;
+    left: 1500px;
+    top: -900px;
+    width: 1200px;
+    height: 700px;
+    margin: 20px;
+    overflow: hidden;
+}
+main img{
+    border: 1px solid transparent;
+    border-radius: 95px;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    position: relative; 
+}
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .card-overlay h3{
+    color: beige;
+    font-size: 50px;
+
+  }
+  .card-overlay p{
+    color: beige;
+    font-size:30px;
+  }
+
+  .card:hover img {
+    transform: scale(1.1);
+  }
+  
+  .card:hover .card-overlay {
+    opacity: 1;
+  }
+.paragraph-company {
+    line-height: 1.5;
+    font:bold;
+    color: beige;
+    font-size:35px;
+    width: 1500px;
+    position: relative;
+    left: -300px;
+}
+main{
+    position: relative;
+    left: 550px;
+    bottom: -250px;
 }
 
 /* Other styles */
@@ -14,37 +75,42 @@ header {
     margin-left: 50px;
     display: flex;
     align-items: center;
+    position: relative;
+    bottom: -100px;
 }
 
 header img {
-    width: 50px;
+    width: 90px;
     margin-right: 5px;
     display: inline-block; /* make the image behave like an inline element */
 }
 
 header h2 {
     margin: 0;
-    font-size: 40px;
+    font-size: 70px;
     display: inline-block;
     left: -10px;
+    color: beige;
 }
 
 header button {
-    background-color: #9dc5e6;
-    color: #050000;
-    font-size: 16px;
+    background-color: rgb(225, 236, 194);
+    color: #a356b6;
     font-weight: bold;
     border: none;
     border-radius: 25px;
-    padding: 10px 20px;
     cursor: pointer;
-    width: 120px;
+    width: 300px;
+    height: 55px;
     position: relative;
-    left: -30px; /* decreased distance */
+    left: 160px; /* decreased distance */
+    font-size: 24px; /* increase the font size */
+    padding: 10px; /* increase the padding to create more space */
+    margin-right: 70px;
 }
 
 header button:hover {
-    background-color: #c54891;
+    background-color: transparent  ;
 }
 
 header button::before {
@@ -55,7 +121,7 @@ header button::before {
     width: calc(100% + 20px);
     height: calc(100% + 20px);
     border-radius: 35px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color:lavender;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 }
@@ -65,7 +131,9 @@ header button:hover::before {
 }
 
 header button i {
-    margin-right: 5px;
+    margin-right: 10px; /* decrease the margin between the icon and the text */
+    font-size: 32px; /* increase the icon size */
+
 }
 
 header button:hover::after {
@@ -74,12 +142,12 @@ header button:hover::after {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 14px;
+    font-size: 26px;
     font-weight: normal;
-    background-color: lightcoral;
-    padding: 5px 10px;
+    background-color: rgb(204, 197, 130);
+    padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: blue;
     z-index: 1;
 }
 
@@ -108,15 +176,7 @@ nav a:hover {
     color: #c54891;
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-section {
-    margin-bottom: 30px;
-}
 
 h1, h2 {
     color: #333;
@@ -124,9 +184,6 @@ h1, h2 {
     margin: 0 0 10px 0;
 }
 
-p {
-    line-height: 1.5;
-}
 
 ul {
     margin: 0;
@@ -157,32 +214,13 @@ nav li:last-child {
 
 
 section h3 {
+    color: beige;
     position: relative;
-    font-size: 20px;
+    font-size: 40px;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 20px;
     left : -450px;
-}
-
-.paragraph-company{
-    position: relative;
-    left : -450px;
-}
-
-.image-container {
-    border: 10px solid rgba(0,0,0,0.2); /* Adds a 10px wide transparent border */
-    padding: 5px; /* Adds some padding inside the border */
-    display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    position: relative;
-    left: 500px;
-    top: -400px;
-}
-
-img {
-    max-width: 100%;
-    height: auto; /* Ensures the image maintains its aspect ratio */
 }
 
 
@@ -208,7 +246,9 @@ nav a:hover::after {
     transform: scaleX(1);
 }
 
-
+footer{
+    font-size: 60px;
+}
 
 @keyframes spin {
     from {
